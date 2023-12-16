@@ -1,0 +1,34 @@
+server-group: "survival"
+bungee-server: "server-1"
+threads: 4
+
+redis:
+    host: "localhost"
+    port: 6379
+    password: ""
+    timeout: 2000
+
+forced-pvp-worlds:
+    - "mundo2"
+    - "mundo5"
+
+database:
+    connection: "mongodb://127.0.0.1:27017"
+    name: "clans"
+
+clans:
+    channel:
+        message-format: "&f%player_name% &a: &f%message%"
+
+    # expiry time in seconds
+    invite-expiry: 600
+    ally-request-expiry: 600
+
+    create-cost: 100
+
+    # default pattern with allow a-z and 0-9
+    # with the minimum and maximum length configured
+    # don't recommend changing this unless you know what you're doing
+    tag-pattern: "[a-zA-Z0-9_]{%s,%s}"
+    tag-min-length: 3
+    tag-max-length: 6

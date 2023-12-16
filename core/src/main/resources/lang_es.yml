@@ -1,0 +1,218 @@
+commands:
+    main-help:
+        - " "
+        - "&a-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+        - "&a* &f/clan create <tag> &a- &fCrea un clan nuevo"
+        - "&a* &f/clan disband &a- &fElimina tu clan"
+        - "&a* &f/clan invite <player> &a- &fInvita a un jugador a tu clan"
+        - "&a* &f/clan accept <tag> &a- &fAceptar una invitación de clan"
+        - "&a* &f/clan deny <tag> &a- &fDenegar una invitación de clan"
+        - "&a* &f/clan kick <player> &a- &fExpulsa a un jugador de tu clan"
+        - "&a* &f/clan promote <player> &a- &fAscender a un jugador a moderador del clan"
+        - "&a* &f/clan demote <player> &a- &fDescender a un jugador a miembro del clan"
+        - "&a* &f/clan leave &a- &fDejar el clan"
+        - "&a* &f/clan sethome &a- &fEstablecer la casa de tu clan"
+        - "&a* &f/clan delhome &a- &fEliminar la casa de tu clan"
+        - "&a* &f/clan home &a- &fIr a la casa de tu clan"
+        - "&a* &f/clan chat &a- &fHabilitar/Deshabilitar el chat de tu clan"
+        - "&a* &f/clan chatally &a- &fHabilitar/Deshabilitar el chat de tu clan con los aliados del clan"
+        - "&a* &f/clan changeleader <member> &a- &fTransferir el lider del clan"
+        - "&a-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+        - " "
+    ally-help:
+        - " "
+        - "&a-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+        - "&a* &f/clan ally add <tag> &a- &fSolicitar alianza a un clan"
+        - "&a* &f/clan ally remove <tag> &a- &fEliminar una alianza"
+        - "&a* &f/clan ally list &a- &fListar las alianzas"
+        - "&a* &f/clan ally accept <tag> &a- &fAceptar una solicitud de alianza"
+        - "&a* &f/clan ally deny <tag> &a- &fDenegar una solicitud de alianza"
+        - "&a-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+        - " "
+    enemy-help:
+        - " "
+        - "&a-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+        - "&a* &f/clan enemy add <tag> &a- &fMarcar como enemigo a un clan"
+        - "&a* &f/clan enemy remove <tag> &a- &fEliminar de enemigo a un clan"
+        - "&a* &f/clan enemy list &a- &fListar los enemigos"
+        - "&a-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+        - " "
+
+    usage: "&cUso correcto: "
+    argument:
+        no-more: "&c¡No se encontraron más argumentos!"
+    command:
+        subcommand-invalid: "&c¡El subcomando que intentas utilizar no existe!"
+        no-permission: "&c¡No tienes suficientes permisos para ejecutar este comando!"
+        error: "&c¡Ha ocurrido un error al ejecutar el comando, intenta de nuevo!"
+    sender:
+        unknown: "&c¡Ha ocurrido un error al ejecutar el comando, intenta de nuevo!"
+        only-player: "&c¡Este comando solo puede ser utilizado por jugadores!"
+    player:
+        unknown-or-offline: "&c¡Ese nombre es inválido o el jugador se encuentra desconectado!"
+        unknown: "&c¡Ese nombre es inválido, por favor introduce uno válido!"
+        offline: "&c¡Este jugador está desconectado!"
+    clustered-player-not-found: "&c¡No hay un jugador con ese nombre en el servidor!"
+    not-self: "&c¡No puedes hacer esto contigo mismo!"
+    clan:
+        channel-not-found: "&c¡No existe un canal con ese nombre!"
+        not-self: "&c¡No puedes hacer esto con tu mismo clan!"
+        not-found: "&c¡No se encontró el clan!"
+        not-in-clan: "&cDebes pertenecer a un clan para hacer esto"
+        self-not-found: "&c¡No se encontró tu clan!"
+        member-not-found: "&c¡No se encontró un miembro en tu clan con ese nombre!"
+
+placeholder:
+    time-format: "dd/MM/yyyy HH:mm:ss"
+    no-clan: "&cSin clan"
+    relation:
+        ally:
+            color: "&d"
+            text: "[Aliado]"
+        enemy:
+            color: "&c"
+            text: "[Enemigo]"
+        neutral:
+            color: "&e"
+            text: "[Neutral]"
+        member:
+            color: "&a"
+            text: ""
+
+clan:
+    not-found: "&c¡No se encontró el/tú clan!"
+    already-exists: "&c¡Ya existe un clan con ese tag!"
+    already-in-clan: "&c¡Ya estás en un clan, para poder hacer esto debes deshacer o salir del actual!"
+    not-in-clan: "&c¡No estás en un clan!"
+    save-failed: "&c¡Ha ocurrido un error al actualizar la información del clan!"
+
+    error-sending-message: "&c¡Ha ocurrido un error al enviar el mensaje, intenta de nuevo!"
+
+    enable-friendly-fire: "&c¡El clan ha habilitado el fuego amistoso!"
+    disable-friendly-fire: "&c¡El clan ha deshabilitado el fuego amistoso!"
+
+    already-enemy: "&c¡Este clan ya es enemigo!"
+    not-enemy: "&c¡Este clan no es enemigo!"
+    ally-enemy: "&c¡Este clan es aliado de tu clan!"
+    enemy-list:
+        empty: "&c¡No tienes ningún clan enemigo!"
+        format: "&c * &f%tag%"
+        message:
+            - " "
+            - "&a-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+            - " &fLista de aliados:"
+            - "%allies%"
+            - "&a-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+            - " "
+    enemy-added-members: "&f¡Ahora el clan &a%tag% &fes enemigo de tu clan!"
+    enemy-added-target-members: "&f¡El clan &a%tag% &flos ha añadido como clan enemigo!"
+    enemy-removed-members: "&f¡El clan &a%tag% &fya no es enemigo de tu clan!"
+    enemy-removed-target-members: "&f¡El clan &a%tag% &flos ha quitado como clan enemigo!"
+
+    already-ally: "&c¡Ya estás aliado con este clan!"
+    already-ally-request: "&c¡Ya has enviado una solicitud de alianza con este clan!"
+    not-ally: "&c¡No estás aliado con este clan!"
+    ally-list:
+        empty: "&c¡No tienes ningún clan aliado!"
+        format: "&a * &f%tag%"
+        message:
+            - " "
+            - "&a-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+            - " &fLista de aliados:"
+            - "%allies%"
+            - "&a-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+            - " "
+    ally-no-request: "&c¡No has recibido ninguna solicitud de alianza con este clan!"
+    ally-remove-target-members: "&f¡El clan &a%tag% &fha roto la alianza con tu clan!"
+    ally-remove-members: "&f¡El líder ha roto la alianza con el clan &a%tag%!"
+    ally-accept-target-members: "&f¡Tu clan se ha aliado con el clan &a%tag%&f!"
+    ally-accept-members: "&f¡El clan &a%tag%&f se ha aliado con tu clan!"
+    ally-deny-target-members: "&f¡Tu clan ha denegado la solicitud de alianza con el clan &a%tag%&f!"
+    ally-deny-members: "&f¡El clan &a%tag%&f ha denegado la solicitud de alianza con tu clan!"
+    ally-request-expired: "&c¡La solicitud de alianza con este clan ha expirado!"
+    ally-request-offline: "&c¡No se puede enviar una solicitud de alianza ya que el dueño del otro clan está desconectado!"
+    ally-request-self: "&c¡No puedes enviar una solicitud de alianza a ti mismo!"
+    ally-request-members: "&f¡Se ha envíado una solicitud de alianza al clan &a%tag%&f!"
+    ally-request-target:
+        - " "
+        - " <white>Solicitud de alianza del clan <green>%tag%"
+        - " <white>¡Esta solicitud expirará en <green>%time% <white>segundos!"
+        - " <click:run_command:/clan ally accept %tag%><hover:show_text:'<green>¡Clic para aceptar!'><green>Aceptar</hover></click>  <gray>|  <click:run_command:/clan ally deny %tag%><hover:show_text:'<red>¡Clic para denegar!'><red>Denegar</hover></click>"
+        - " "
+
+    set-home-members: "&f¡Se ha establecido la localización de la casa de tu clan!"
+    no-home: "&c¡La casa del clan no ha sido establecida aún!"
+    teleport-home: "&f¡Has sido teletransportado a la casa del clan!"
+    del-home-members: "&f¡Se ha borrado la localización de la casa de tu clan!"
+
+    transfer-owner-target: "&f¡Ahora eres el dueño del clan!"
+    transfer-owner-members: "&f¡Se ha transferido el clan a &a%target%&f!"
+
+    already-mod: "&c¡Ese jugador ya es moderador!"
+    promote-success-members: "&f¡&a%target% &ffue ascendido por &a%sender% &fa moderador!"
+    promote-success-target: "&f¡Has sido ascendido por &a%sender% &fa moderador!"
+    not-mod: "&c¡Debes ser moderador del clan para poder hacer esto!"
+
+    demote-not-mod: "&c¡Ese miembro no es moderador!"
+    demote-success-members: "&f¡&a%target% &ffue descendido por &a%sender%&f!"
+    demote-success-target: "&f¡Has sido descendido por &a%sender%&f!"
+    cannot-demote-owner: "&c¡No puedes quitarte el lider del clan!"
+
+    already-member: "&c¡Ese jugador ya es miembro de este clan!"
+    already-invited: "&c¡Ese jugador ya ha sido invitado a tu clan, por favor espera a que acepte!"
+    invited-target:
+        - " "
+        - " <white>Has sido invitado al clan <green>%tag%"
+        - " <white>¡Esta invitación expirará en <green>%time% <white>segundos!"
+        - " <click:run_command:/clan accept %tag%><hover:show_text:'<green>¡Clic para aceptar!'><green>Aceptar</hover></click>  <gray>|  <click:run_command:/clan deny %tag%><hover:show_text:'<red>¡Clic para denegar!'><red>Denegar</hover></click>"
+        - " "
+    invited-members: "&f¡Se ha invitado a &a%target% &fpara ser miembro de tu clan!"
+    no-invite: "&cNo tienes ninguna invitación de ese clan pendiente."
+    invite-expired: "&c¡La invitación ha expirado!"
+    invite-accepted-target: "&f¡Has aceptado la invitación al clan &a%tag%&f!"
+    invite-accepted-members: "&f¡&a%target% &fse ha unido a tu clan!"
+    invite-deny-target: "&f¡Has denegado la invitación al clan &a%tag%&f!"
+    invite-deny-members: "&f¡&a%target% &fha denegado la invitación a tu clan!"
+
+    cannot-leave-own-clan: "&c¡No puedes dejar tu propio clan, para salir debes deshacer tu clan!"
+    left-clan-sender: "&f¡Has dejado el clan &a%tag%&f!"
+    left-clan-members: "&f¡&a%target% &fha dejado el clan&f!"
+    moderator-left-clan-members: "&f¡El moderador &a%target% &fha dejado el clan&f!"
+    error-leaving-clan: "&f¡Ha ocurrido un error al dejar el clan, intenta de nuevo!"
+
+    error-finding-data: "&c¡Ha ocurrido un error al buscar la información del clan, intenta de nuevo!"
+    not-owner: "&c¡Solo el dueño del clan puede hacer eso!"
+
+    not-enough-money: "&c¡No tienes suficiente dinero para crear un clan!"
+    invalid-tag: "&c¡El tag del clan debe tener un mínimo de carácteres de &c&n%min%&c y un máximo de &c&n%max%&c compuesto por letras y números!"
+
+    kick-offline-notify: "&f¡Fuiste expulsado del clan al que pertenecías!"
+    kick-mod: "&cNo puedes expulsar a un moderador del clan"
+    kick-success-target: "&f¡Has sido expulsado del clan &a%tag%&f!"
+    kick-success-members: "&f¡&a%target% &fha sido expulsado del clan por &a%sender%&f!"
+
+    disband-success: "&c¡Has disuelto tu clan correctamente!"
+    disband-failed: "&cOcurrió un error al intentar disolver tu clan, ¡intenta de nuevo!"
+    disband-members: "&c¡Tu clan ha sido disuelto!"
+    disband-offline-notify: "&f¡El clan al que pertenecías ha sido disuelto!"
+
+    create-failed: "&c¡Ha ocurrido un error al crear el clan, intenta de nuevo!"
+    create-success:
+        - " "
+        - " &fSe ha creado un nuevo clan"
+        - " &aTag: &f%tag%"
+        - " &aCreador: &f%creator%"
+        - " "
+
+channels:
+    prefix: "%path_channels.%channel%% >> %message%"
+    members: "&9Miembros"
+    allies: "&bAliados"
+
+user:
+    not-found: "&cOcurrió un error al buscar tu información, si este error continúa contacta con un administrador"
+    load-error: "&cNo pudimos obtener tu información, intenta de nuevo"
+
+    exit-channel: "&f¡Ahora estás en el chat global!"
+    already-in-channel: "&cYa estás en ese canal!"
+    change-channel: "&f¡Ahora estás en el canal de &a%channel% &ftodos tus mensajes serán envíados por ahí!"
